@@ -8,7 +8,7 @@ function page() {
      <PageBanner tittel="Contact"/>
         <ContactUs/>
         <FeaturesSection />
-
+   
     </div>
   )
 }

@@ -1,23 +1,21 @@
 import Link from "next/link";
-import { useState } from "react";
-import CartPage from "../../Comparison/page.jsx";
-
+import Image from "next/image.js";
+import { assets } from "@/assets/assets";
 function CartModal({ onClose }) {
-  // افتراض أن هذه هي المنتجات في السلة
   const cartItems = [
     {
       id: 1,
       name: "Asgaard Sofa",
       price: 250000,
       quantity: 1,
-      image: "/sofa1.png",
+      image: assets.image6,
     },
     {
       id: 2,
       name: "Casaliving Wood",
       price: 270000,
       quantity: 1,
-      image: "/sofa2.png",
+      image: assets.image6,
     },
   ];
   const subtotal = cartItems.reduce(
@@ -38,7 +36,7 @@ function CartModal({ onClose }) {
               key={item.id}
               className="flex justify-between items-center mb-4"
             >
-              <img
+              <Image
                 src={item.image}
                 alt={item.name}
                 className="w-16 h-16 object-cover"

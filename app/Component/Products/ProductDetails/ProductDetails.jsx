@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import { useState } from "react";
@@ -45,7 +45,7 @@ export default function ProductDetails() {
       {activeTab === "description" && (
         <div className="text-gray-700 mb-8">
           <p>
-            Embodying the raw, wayward spirit of rock 'n' roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.
+            Embodying the raw, wayward spirit of rock &apos;n&apos; roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.
           </p>
           <p className="mt-4">
             Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced.
@@ -56,7 +56,7 @@ export default function ProductDetails() {
       {activeTab === "additional" && (
         <div className="text-gray-700 mb-8">
           <p>
-            This product is made of high-quality materials and comes with a 2-year warranty. It's suitable for both indoor and outdoor use.
+            This product is made of high-quality materials and comes with a 2-year warranty. It&apos;s suitable for both indoor and outdoor use.
           </p>
         </div>
       )}
