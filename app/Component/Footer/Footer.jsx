@@ -1,5 +1,4 @@
 import Navebar from "../Header/Navebar";
-
 export default function Footer() {
   return (
     <footer>
