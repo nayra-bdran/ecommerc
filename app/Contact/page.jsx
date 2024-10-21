@@ -1,11 +1,7 @@
 import React from 'react'
-import ContactUs from './Contactus'
-import Link from 'next/link'
-import Image from 'next/image'
-import { assets } from '@/assets/assets'
 import FeaturesSection from '../Component/FeaturesSection/FeaturesSection'
 import PageBanner from '../Component/PageBanner/PageBanner'
-
+import ContactUs from './ContactUs';
 function page() {
   return (
     <div>
