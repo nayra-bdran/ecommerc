@@ -18,3 +18,8 @@ function page() {
 }
 
 export default page;
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/nayra-bdran/nayra.git
+git push -u origin main
