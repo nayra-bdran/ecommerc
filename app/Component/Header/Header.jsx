@@ -90,7 +90,6 @@ function Header() {
             <button onClick={() => setIsCartOpen(true)} className="relative">
               <AiOutlineShoppingCart size={24} />
             </button>
-            {isCartOpen && <CartModal onClose={() => setIsCartOpen(false)} />}
           </div>
         </div>
       )}

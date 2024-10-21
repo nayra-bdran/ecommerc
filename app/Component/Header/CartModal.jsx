@@ -1,6 +1,7 @@
 import Link from "next/link";
-import Image from "next/image.js";
+import Image from "next/image";
 import { assets } from "@/assets/assets";
+
 function CartModal({ onClose }) {
   const cartItems = [
     {
@@ -25,7 +26,7 @@ function CartModal({ onClose }) {
 
   return (
     <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-end z-50">
-      <div className="bg-white w-1/3 h-full p-6">
+      <div className="bg-white w-full md:w-1/2 lg:w-1/3 h-full p-6 overflow-y-auto">
         <button onClick={onClose} className="text-2xl mb-4">
           X
         </button>
@@ -55,31 +56,27 @@ function CartModal({ onClose }) {
           <h3 className="text-xl font-bold">
             Subtotal: Rs. {subtotal.toLocaleString()}
           </h3>
-          <div className="flex justify-between mt-4 gap-4">
-          <Link href="/Cart">
-
-              <button className=" px-8 py-1 rounded-full font-semibold border-[1.8px]  border-[#000000]">
+          <div className="flex flex-col sm:flex-row justify-between mt-4 gap-4">
+            <Link href="/Cart">
+              <button className="w-full sm:w-auto px-8 py-2 rounded-full font-semibold border-[1.8px] border-[#000000]">
                 Cart
               </button>
-              </Link>
-
-              <Link href="/CheckOut">
-
-            <button className=" px-8 rounded-full font-semibold border-[1.8px]  border-[#000000]">
-              Checkout
-            </button>
             </Link>
-
+            <Link href="/CheckOut">
+              <button className="w-full sm:w-auto px-8 py-2 rounded-full font-semibold border-[1.8px] border-[#000000]">
+                Checkout
+              </button>
+            </Link>
             <Link href="/Comparison">
-            <button className=" px-8 rounded-full font-semibold border-[1.8px]  border-[#000000]">
-              Comparison
-            </button>
+              <button className="w-full sm:w-auto px-8 py-2 rounded-full font-semibold border-[1.8px] border-[#000000]">
+                Comparison
+              </button>
             </Link>
-
           </div>
         </div>
       </div>
     </div>
   );
 }
+
 export default CartModal;

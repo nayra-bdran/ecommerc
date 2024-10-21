@@ -13,10 +13,10 @@ export default function ItemProduct() {
   };
 
   return (
-    <div className="container mx-auto py-8">
-      <div className="flex space-x-8">
+    <div className="container mx-auto py-8 px-4">
+      <div className="flex flex-col lg:flex-row lg:space-x-8">
         {/* Sidebar with thumbnails */}
-        <div className="flex flex-col space-y-4">
+        <div className="flex lg:flex-col space-x-4 lg:space-x-0 lg:space-y-4 mb-4 lg:mb-0">
           <Image src={assets.group1} width={100} height={100} className="bg-cover bg-[#F9F1E7] rounded-lg" alt="sofa" />
           <Image src={assets.group2} width={100} height={100} className="bg-cover" alt="sofa" />
           <Image src={assets.group3} width={100} height={100} className="bg-cover" alt="sofa" />
@@ -24,14 +24,14 @@ export default function ItemProduct() {
         </div>
 
         {/* Main product image */}
-        <div className="flex flex-1 items-center justify-center bg-[#F9F1E7] rounded-lg">
-          <Image src={assets.Asgaard} width={500} height={400} alt="sofa" className="" />
+        <div className="flex-1 flex justify-center bg-[#F9F1E7] rounded-lg mb-4 lg:mb-0">
+          <Image src={assets.Asgaard} width={500} height={400} alt="sofa" className="object-contain" />
         </div>
 
         {/* Product details */}
         <div className="flex-1">
-          <h1 className="text-3xl font-bold mb-4">Asgaard sofa</h1>
-          <p className="text-gray-700 text-xl mb-2">Rs. 250,000.00</p>
+          <h1 className="text-2xl md:text-3xl font-bold mb-4">Asgaard sofa</h1>
+          <p className="text-gray-700 text-lg md:text-xl mb-2">Rs. 250,000.00</p>
 
           {/* Rating and reviews */}
           <div className="flex items-center space-x-2 mb-4">
@@ -88,34 +88,34 @@ export default function ItemProduct() {
           </div>
 
           {/* Buttons */}
-          <div className="flex space-x-4 mb-8">
-            <button className="px-6 py-3 bg-black text-white rounded-lg">Add To Cart</button>
-            <button className="px-6 py-3 border rounded-lg">+ Compare</button>
+          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
+            <button className="px-6 py-3 bg-black text-white rounded-lg w-full sm:w-auto">Add To Cart</button>
+            <button className="px-6 py-3 border rounded-lg w-full sm:w-auto">+ Compare</button>
           </div>
 
           {/* Additional Info */}
-         
         </div>
-        
       </div>
-   <div className="flex justify-center">
-   <div className="text-sm text-gray-600 space-y-2 ">
-            <p><strong>SKU:</strong> SS001</p>
-            <p><strong>Category:</strong> Sofas</p>
-            <p><strong>Tags:</strong> Sofa, Chair, Home, Shop</p>
 
-            {/* Share Options */}
-            <div className="mt-4">
-              <p className="font-semibold">Share</p>
-              <div className="flex space-x-4 mt-2">
-                <a href="#" className="text-black"><i className="fab fa-facebook-f"></i></a>
-                <a href="#" className="text-black"><i className="fab fa-twitter"></i></a>
-                <a href="#" className="text-black"><i className="fab fa-linkedin-in"></i></a>
-                <a href="#" className="text-black"><i className="fab fa-instagram"></i></a>
-              </div>
+      {/* Additional Info Below on Smaller Screens */}
+      <div className="flex justify-center mt-8">
+        <div className="text-sm text-gray-600 space-y-2">
+          <p><strong>SKU:</strong> SS001</p>
+          <p><strong>Category:</strong> Sofas</p>
+          <p><strong>Tags:</strong> Sofa, Chair, Home, Shop</p>
+
+          {/* Share Options */}
+          <div className="mt-4">
+            <p className="font-semibold">Share</p>
+            <div className="flex space-x-4 mt-2">
+              <a href="#" className="text-black"><i className="fab fa-facebook-f"></i></a>
+              <a href="#" className="text-black"><i className="fab fa-twitter"></i></a>
+              <a href="#" className="text-black"><i className="fab fa-linkedin-in"></i></a>
+              <a href="#" className="text-black"><i className="fab fa-instagram"></i></a>
             </div>
           </div>
-   </div>
+        </div>
+      </div>
     </div>
   );
 }

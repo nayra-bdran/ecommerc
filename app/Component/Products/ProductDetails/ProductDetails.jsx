@@ -5,12 +5,13 @@ import { useState } from "react";
 
 export default function ProductDetails() {
   const [activeTab, setActiveTab] = useState("description");
+
   return (
-    <div className="container mx-auto py-8">
+    <div className="container mx-auto py-8 px-4">
       {/* Tabs for navigation */}
-      <div className="flex justify-start border-b mb-4">
+      <div className="flex flex-col sm:flex-row justify-start border-b mb-4">
         <button
-          className={`px-4 py-2 text-lg ${
+          className={`px-4 py-2 text-lg w-full sm:w-auto ${
             activeTab === "description"
               ? "border-b-2 border-black font-bold"
               : "text-gray-500"
@@ -20,7 +21,7 @@ export default function ProductDetails() {
           Description
         </button>
         <button
-          className={`px-4 py-2 text-lg ${
+          className={`px-4 py-2 text-lg w-full sm:w-auto ${
             activeTab === "additional"
               ? "border-b-2 border-black font-bold"
               : "text-gray-500"
@@ -30,7 +31,7 @@ export default function ProductDetails() {
           Additional Information
         </button>
         <button
-          className={`px-4 py-2 text-lg ${
+          className={`px-4 py-2 text-lg w-full sm:w-auto ${
             activeTab === "reviews"
               ? "border-b-2 border-black font-bold"
               : "text-gray-500"
@@ -68,12 +69,20 @@ export default function ProductDetails() {
       )}
 
       {/* Product images */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
         <div className="bg-[#F9F1E7] p-4 rounded-lg">
-          <Image src={assets.Cloudsofa1} alt="Sofa 1" className="rounded-lg" />
+          <Image
+            src={assets.Cloudsofa1}
+            alt="Sofa 1"
+            className="rounded-lg object-contain"
+          />
         </div>
         <div className="bg-[#F9F1E7] p-4 rounded-lg">
-          <Image src={assets.Cloudsofa2} alt="Sofa 2" className="rounded-lg" />
+          <Image
+            src={assets.Cloudsofa2}
+            alt="Sofa 2"
+            className="rounded-lg object-contain"
+          />
         </div>
       </div>
     </div>
